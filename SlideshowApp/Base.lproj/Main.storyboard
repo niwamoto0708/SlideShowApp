@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phJ-FG-M63">
-                                <rect key="frame" x="13.5" y="222" width="41" height="36"/>
+                                <rect key="frame" x="44" y="222" width="41" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="戻る">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -33,9 +33,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgP-qR-kr7">
-                                <rect key="frame" x="115.5" y="222" width="89" height="36"/>
+                                <rect key="frame" x="117" y="222" width="86" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="再生/停止">
+                                <state key="normal" title="[               ]">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MK-Ys-due">
-                                <rect key="frame" x="265.5" y="222" width="41" height="36"/>
+                                <rect key="frame" x="235" y="222" width="41" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="進む">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -63,30 +63,51 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Px-qJ-zcR">
                                 <rect key="frame" x="88" y="50" width="144" height="150"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="TKn-c0-abI"/>
                                     <constraint firstAttribute="height" constant="150" id="cjl-s7-WGE"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zio-Cw-7sq">
+                                <rect key="frame" x="115" y="225" width="90" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ejw-7f-vPH" userLabel="height = 50"/>
+                                    <constraint firstAttribute="width" constant="90" id="gZv-5R-HNA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lgP-qR-kr7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HYE-73-Z5Q"/>
-                            <constraint firstItem="phJ-FG-M63" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ns7-di-Naa"/>
-                            <constraint firstItem="lgP-qR-kr7" firstAttribute="trailing" secondItem="phJ-FG-M63" secondAttribute="trailing" constant="150" id="YuD-F2-LtW"/>
-                            <constraint firstItem="0Px-qJ-zcR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="72" id="aMn-53-kK5" userLabel="Image View.leading = leadingMargin + 65"/>
-                            <constraint firstItem="2MK-Ys-due" firstAttribute="leading" secondItem="lgP-qR-kr7" secondAttribute="leading" constant="150" id="iwc-81-ATy"/>
-                            <constraint firstItem="lgP-qR-kr7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jN3-Z8-xp3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0Px-qJ-zcR" secondAttribute="trailing" constant="72" id="md4-3J-KM4" userLabel="trailingMargin = Image View.trailing + 65"/>
-                            <constraint firstItem="2MK-Ys-due" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pkT-G1-b5v"/>
-                            <constraint firstItem="0Px-qJ-zcR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="uT9-kw-CLf"/>
+                            <constraint firstItem="zio-Cw-7sq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="34Z-iu-eJj"/>
+                            <constraint firstItem="lgP-qR-kr7" firstAttribute="top" secondItem="0Px-qJ-zcR" secondAttribute="bottom" constant="22" id="9iY-pq-lEt"/>
+                            <constraint firstItem="lgP-qR-kr7" firstAttribute="trailing" secondItem="phJ-FG-M63" secondAttribute="trailing" constant="118" id="DQl-lu-l43"/>
+                            <constraint firstItem="0Px-qJ-zcR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="FbH-8c-lIv"/>
+                            <constraint firstItem="2MK-Ys-due" firstAttribute="leading" secondItem="lgP-qR-kr7" secondAttribute="leading" constant="118" id="Gf2-f4-X4h"/>
+                            <constraint firstItem="phJ-FG-M63" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IHk-XW-3Bk"/>
+                            <constraint firstItem="lgP-qR-kr7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UlG-gT-BsH"/>
+                            <constraint firstItem="lgP-qR-kr7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V81-VA-JMR"/>
+                            <constraint firstItem="2MK-Ys-due" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="a8U-CJ-OGZ"/>
+                            <constraint firstItem="0Px-qJ-zcR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="72" id="bxA-K1-6Xz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Px-qJ-zcR" secondAttribute="trailing" constant="72" id="cR3-Ua-ZyI"/>
+                            <constraint firstItem="lgP-qR-kr7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oG1-Pm-Npo"/>
+                            <constraint firstItem="zio-Cw-7sq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oVs-qT-j7l"/>
+                            <constraint firstItem="lgP-qR-kr7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sfP-Aw-fl6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="phJ-FG-M63" id="4V6-Yn-u0U"/>
                         <outlet property="imageView" destination="0Px-qJ-zcR" id="TBN-99-pYb"/>
+                        <outlet property="largeButton" destination="PCS-Eb-nn3" id="P5i-5y-6Eh"/>
+                        <outlet property="nextButton" destination="2MK-Ys-due" id="m6D-ok-8en"/>
+                        <outlet property="startstopButton" destination="zio-Cw-7sq" id="PbH-qY-Viz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424" y="135"/>
+            <point key="canvasLocation" x="423.75" y="135"/>
         </scene>
         <!--Extend View Controller-->
         <scene sceneID="ORu-ze-fOL">

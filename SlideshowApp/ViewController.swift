@@ -14,13 +14,18 @@ class ViewController: UIViewController {
     var imageArray = [UIImage]()
     var timer: Timer? = nil
     var updateCount = 0
+    @IBOutlet var nextButton: UIButton!
+    @IBOutlet var backButton: UIButton!
+    @IBOutlet var largeButton: UIButton!
+    @IBOutlet var startstopButton: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let image0 = UIImage(named: "0.jpg")
         imageView.image = image0
-        
+        startstopButton.text = "再生"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,11 +48,19 @@ class ViewController: UIViewController {
         if (timer == nil) {
             
             timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateImage), userInfo: nil, repeats: true)
+            nextButton.isEnabled = false
+            backButton.isEnabled = false
+            largeButton.isEnabled = false
+            startstopButton.text = "停止"
             
         } else {
             
             timer?.invalidate()
             timer = nil
+            nextButton.isEnabled = true
+            backButton.isEnabled = true
+            largeButton.isEnabled = true
+            startstopButton.text = "再生"
         }
     }
     
@@ -70,6 +83,7 @@ class ViewController: UIViewController {
             
         } else {
             
+
             
         }
     
@@ -110,6 +124,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nextPage(_ sender: Any) {
+        
         
         
         
